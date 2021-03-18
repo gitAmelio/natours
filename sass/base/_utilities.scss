@@ -1,0 +1,49 @@
+.u-ai-c { align-items: center; }
+.u-ac-c { align-content: center; }
+.u-as-c { align-self: center; }
+.u-ji-c { justify-items: center; }
+.u-jc-c { justify-content: center; }
+.u-js-c { justify-self: center; }
+.u-dg { display: grid; }
+.u-df-fdr {
+    display: flex;
+    flex-direction: row;
+}
+.u-df-fdc {
+    display: flex;
+    flex-direction: column;
+}
+.u-gc-1-end { grid-column: 1 / -1; }
+.u-gc-1-span-1 { grid-column: 1 / span 1; }
+.u-gc-2-span-1 { grid-column: 2 / span 1; }
+
+.u-media-padding {
+    padding: 4rem;
+}
+.u-2-columns {
+    grid-template-columns: repeat(2,1fr);
+}
+
+.u-margin-bottom-small { margin-bottom: 1.5rem; } // !important; }
+.u-margin-bottom-medium {
+     margin-bottom: 4rem; //!important; 
+    
+     @include respond(tab-port) {
+        margin-bottom:  3rem;// !important;
+    }
+}
+.u-margin-bottom-big { 
+    margin-bottom: 8rem;// !important; 
+
+    @include respond(tab-port) {
+        margin-bottom: 5rem;// !important;
+    }
+}
+
+.u-margin-top-big { margin-top:  8rem;}// !important; }
+.u-margin-top-huge { 
+    margin-top:  10rem !important; 
+    @include respond(tab-port){
+        margin-top: 0  !important;
+    }
+}

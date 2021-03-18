@@ -1,0 +1,116 @@
+.heading-secondary {
+    @include old-sheet;
+    font-size: 4rem;
+    text-transform: uppercase;
+
+    text-align: center;
+
+    @include respond(tab-port) { 
+        font-size: 3rem;
+    }
+    @include respond(phone) { 
+        font-size: 2.3rem;
+        line-height: 1.9;
+        padding: 0 15rem;
+        margin-bottom: 10rem;
+    }
+    
+
+    &:hover {
+        &::before {
+            content: '__';
+            background-image: none;
+            border: none;
+    
+            visibility: hidden;
+            position: absolute;
+            font-weight: 700;
+            top:0;
+            left:0;
+            transition: text-shadow 2s;
+            font-size: 1rem;
+ 
+            animation: fade-out-small 5s linear infinite;
+        }
+    }
+    &:not(hover) {
+        
+        &::before {
+            content: '__';
+            background-image: none;
+            border: none;
+            visibility: hidden;
+            position: absolute;
+            font-weight: 700;
+            top:0;
+            left:0;
+            transition: text-shadow 2s;
+            font-size: 1rem;
+            animation: fade-out-small 2s linear;
+        }
+    }
+
+    &--form {
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        padding: 0;
+        margin-top: 2rem;
+    }
+}
+
+$smoke-startX: calc(var(--s)/-1);
+$smoke-endX: var(--s);
+$smoke-centerX: calc(var(--s)/2);
+$smoke-color: rgba($color-white, 0.2);
+
+@keyframes fade-back {
+    0% {
+        visibility: visible;
+        text-shadow: $smoke-endX -50px 10px $smoke-color;
+        font-size: 15rem;
+    }
+    50% {
+        text-shadow: $smoke-centerX -50px 10px $smoke-color;
+        font-size: 15rem;
+    }
+    100% {
+        text-shadow: $smoke-startX -80px 10px $smoke-color;
+        font-size: 15rem;
+    }
+}
+
+@keyframes fade-out-small {
+    0% {
+        visibility: visible;
+        text-shadow: $smoke-startX -50px 10px $smoke-color;
+        font-size: 15rem;
+    }
+    25% {
+        text-shadow: $smoke-centerX -50px 10px $smoke-color;
+        font-size: 15rem;
+    }
+    50% {
+        text-shadow: $smoke-endX -50px 10px $smoke-color;
+        font-size: 15rem;
+    }
+    75% {
+        text-shadow: $smoke-centerX -50px 10px $smoke-color;
+        font-size: 15rem;
+    }
+    100% {
+        text-shadow: $smoke-startX -50px 10px $smoke-color;
+        font-size: 15rem;
+    }
+}
+
+
+.heading-tertiary {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}

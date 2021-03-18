@@ -1,0 +1,90 @@
+
+@mixin text-3d($color, $debth) {
+    $high-lights: lighten($color, 30%);
+    $shaded-sides: darken($color, 40%);
+    $shadow-color: darken($color, 80%);
+    color: $color;
+
+    @if $debth == h_1 {
+        text-shadow: 1px 1px 1px $shaded-sides,
+                    1px 2px 1px $shaded-sides,
+                    1px 3px 1px $shaded-sides,
+                    1px 4px 1px $shaded-sides,
+
+                    -0.6px -0.7px 1px $high-lights,
+                    
+                    1px 8px 6px  $shadow-color,
+                    1px 12px 10px $shadow-color,
+                    1px 16px 35px $shadow-color,
+                    1px 20px 60px $shadow-color;
+    }
+    @if $debth == h_2 {
+        text-shadow: 1px 1px 1px $shaded-sides,
+                    1px 2px 1px $shaded-sides,
+                    1px 3px 1px $shaded-sides,
+
+                    -0.6px -0.7px 1px $high-lights,
+                    
+                    1px 6px 6px  $shadow-color,
+                    1px 9px 10px $shadow-color,
+                    1px 12px 35px $shadow-color,
+                    1px 16px 60px $shadow-color;
+    }
+    @if $debth == h_3 {
+        text-shadow: 1px 1px 1px $shaded-sides,
+                    1px 2px 1px $shaded-sides,
+
+                    -0.6px -0.7px 1px $high-lights,
+                    
+                    1px 6px 6px  $shadow-color,
+                    1px 9px 10px $shadow-color,
+                    1px 12px 35px $shadow-color,
+                    1px 16px 60px $shadow-color;
+    }
+
+    @include respond(tab-port) {
+        text-shadow: 1px 1px 1px $shaded-sides,
+        1px 2px 1px $shaded-sides,
+ 
+        -0.2px -0.2px 1px $high-lights,
+
+        1px 6px 6px  $shadow-color,
+        1px 9px 10px $shadow-color,
+        1px 12px 35px $shadow-color,
+        1px 16px 60px $shadow-color;
+    }
+}
+
+.h1-3d {
+    font-size: 5rem;
+    letter-spacing: 1.25rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    @include text-3d($palette1-color-3, h_1);
+}
+
+.h2-3d {
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: .5rem;
+    @include text-3d($palette1-color-3, h_2);
+}
+
+.h3-3d {
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: .75rem;
+    @include text-3d($palette1-color-3, h_3);
+}
+
+.h4-3d {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    letter-spacing: .75rem;
+    @include text-3d($palette1-color-3, h_1);
+}
+
+

@@ -1,0 +1,56 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // this defines one rem
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    
+    @include respond(big-desktop) {
+        font-size: 75%;  //1 rem = 12px; 12/16 =  75%
+    }
+    @include respond(tab-land) { // width < 1200
+        font-size: 56.25%; //1 rem = 9px; 9/16 = 56.25%
+    }
+    @include respond(tab-port) { // width < 900
+        font-size: 50%;  //1 rem = 8px; 8/16 = 50%
+        // background-color: rgb(4, 20, 1);
+    }
+    @include respond(tab-less) { // width < 750
+        font-size: 46.87%;
+    }
+    @include respond(tab-between) { // width < 1100
+        font-size: 43.75%;  //1 rem = 7px; 7px/16 = 
+    }
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $color-primary-dark;
+    position: relative;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: $color-primary;
+    color: $color-primary-white;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10rem;
+}
+
+.effects {
+    position: absolute;
+}

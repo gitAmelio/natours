@@ -1,0 +1,102 @@
+.section-features {
+    position: relative;
+    grid-column: 1 /-1;
+    display: flex;
+    justify-self: center;
+    
+    @include broken-3d-gap;
+    
+    &::before {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($palette1-color-3, 0.9),           
+            rgba($palette1-color-3, 0.9),              
+            ), 
+            url(/img/box-image-5.jpg);
+
+        background-size: cover;
+    }
+    &__row {
+        padding: 8rem;
+        grid-gap: 4rem;
+        display: flex;
+        
+        @include respond(tab-between) { 
+            padding: 10rem 7rem;
+            flex-wrap: wrap;
+        }
+        @include respond(tab-port) { 
+            grid-gap: 6rem;
+
+            padding: 6rem 25rem;
+        }
+        @include respond(tab-less) { 
+            padding: 10rem 20rem;
+            flex-wrap: wrap;
+        }
+
+        position: relative;
+        grid-column: 1 /-1;
+
+        justify-content: center;
+        justify-items: flex-start;
+        width: 100%;
+
+        .feature {
+            justify-self: center;
+            align-self: stretch;
+            @include old-sheet;
+            margin: 0;
+            background-color: rgba($palette1-color-2, 0.9);
+            &::before {
+                top:0;
+                left:0;
+                filter: none;
+                background-image: none;
+
+                border-top:     $grey-border-side-1;
+                border-left:    $grey-border-side-1;;
+                border-bottom:  $dark-border-side-1;
+                border-right:   $dark-border-side-1;
+
+                transition: all .4s;
+                border-radius: 20px;
+            }
+
+            @include neumorph-pressed;            
+            border-radius: 20px;
+            width: 25rem;
+            color: $palette1-color-5;
+
+            @include respond(tab-port) {
+                
+            }
+
+            transition: transform .2s;
+
+
+            &:hover {
+                transform: translateY(-2rem);
+            }
+
+            &-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            &__icon {
+                width:  8rem;
+                height: 8rem;
+                fill: #030d00;
+                fill: rgba($palette1-color-4, 0.9);
+                stroke-width: .08px;
+                stroke: $color-white;
+                margin-bottom: 4rem;
+            }
+
+
+        } 
+    }
+
+}

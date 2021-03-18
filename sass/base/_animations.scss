@@ -1,0 +1,199 @@
+$go-to-side-1: rotateY(-1 * 1 * 90deg);
+$go-to-side-2: rotateY(-1 * 2 * 90deg);
+$go-to-side-3: rotateY(-1 * 3 * 90deg);
+$go-to-side-4: rotateY(-1 * 4 * 90deg);
+$go-to-side-5: rotateX(-270deg);
+$go-to-side-6: rotateX(-90deg);
+$go-to-start: rotateX(0deg);
+
+$scale-away: scale(.5) rotateY(60deg) rotateX(60deg); 
+$scale-up: scale(1);
+
+@each  $i in  $side-numbers {
+    @keyframes rotate-#{$i} {
+        0% {
+            transform:  $scale-up; 
+        }
+        30% {
+            transform: $scale-away; //scale(.5) rotateY(-180deg);
+        }
+        60% {
+            @if($i == 5){
+                transform: $scale-away $go-to-side-5; 
+            } @else {
+                @if($i == 6){
+                    transform: $scale-away $go-to-side-6; 
+                } @else {
+                    transform: $scale-away rotateY(-1 * $i * 90deg); 
+                }
+            }
+        }
+        100% {
+            @if($i == 5){
+                transform: $scale-up $go-to-side-5; 
+            } @else {
+                @if($i == 6){
+                    transform: $scale-up $go-to-side-6; 
+                } @else {
+                    transform: $scale-up rotateY(-1 * $i * 90deg); 
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes rotate-back {
+    0% {
+        transform:  $scale-up; 
+    }
+    30% {
+        transform: $scale-away;
+    }
+    60% {
+        transform: $scale-away $go-to-start;
+    }
+    100% {
+        transform: $go-to-start $scale-up; 
+    }
+}
+
+.animate-1 {
+    &:before {
+        animation: show-detail-1 4s ease-in-out forwards;
+    }
+    color: white;
+}    
+.animmate-2 {
+    color: white;
+}
+
+
+@keyframes show-detail-1 {
+    0% {
+        background-color: #0b2d11;
+    }
+    30% {
+        filter: url(#wavy-fine);
+
+        @include box-cutout--fine;
+        border-top: $dark-border-side-10;
+        border-left: $dark-border-side-10;
+        border-bottom: $light-border-side-1;
+        border-right: $lighter-border-side-1;
+
+    }
+    60% {
+        filter: url(#wavy-fine);
+        background-color: #0b0c0b;
+
+        @include box-cutout--fine;
+        border-top: $dark-border-side-10;
+        border-left: $dark-border-side-10;
+        border-bottom: $light-border-side-1;
+        border-right: $lighter-border-side-1;
+
+    }
+    100% {
+        filter: url(#wavy-fine);
+        background-color: #0b0c0b;
+
+        @include box-cutout--fine;
+        border-top: $dark-border-side-10;
+        border-left: $dark-border-side-10;
+        border-bottom: $light-border-side-1;
+        border-right: $lighter-border-side-1;
+                border-top:    $darker-border-side-1;
+        border-left:   $dark-border-side-1;
+        border-bottom: $greyer-border-side-1;
+        border-right:  $lighter-border-side-1;
+
+        box-shadow: inset 5px 5px 10px 5px #18251a, 
+                    inset -5px -5px 10px 2px #5e6d61;
+
+    }
+
+}
+
+@keyframes show-detail-2 {
+    0% {
+        filter: url(#wavy-fine);
+        background-color: #0b2d11;
+
+    }
+    30% {
+            @include box-cutout--fine;
+
+            background-color: #9ad3a5;
+            border-top:    $darker-border-side-1;
+            border-left:   $dark-border-side-1;
+            border-bottom: $greyer-border-side-1;
+            border-right:  $lighter-border-side-1;
+
+            box-shadow: inset 5px 5px 10px 5px #18251a, 
+                        inset -5px -5px 10px 2px #5e6d61;
+            filter: url(#wavy-fine);
+    }
+    60% {
+        @include box-cutout--fine;
+
+        background-color: #9ad3a5;
+
+        border-top:    $darker-border-side-1;
+        border-left:   $dark-border-side-1;
+        border-bottom: $greyer-border-side-1;
+        border-right:  $lighter-border-side-1;
+
+        box-shadow: inset 5px 5px 10px 5px #18251a, 
+                    inset -5px -5px 10px 2px #5e6d61;
+        filter: url(#wavy-fine);
+        color: white;
+    }
+    100% {
+        background-color: #0b2d11;
+    }
+}
+
+@keyframes expand {
+    0% {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        border-radius: 100px;
+        border-top-right-radius: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 150vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+@keyframes shrink {
+    0% {
+        width: 150vw;
+        height: 100vh;
+        border-radius: 0;
+        background-image: linear-gradient(to right, rgba($color-black,  .2), rgba($color-black,  .2));
+    }
+    50% {
+        width: 0%;
+        height: 100vh;
+        border-radius: 0;
+        background-image: linear-gradient(to right, rgba($color-black,  .2), rgba($color-black,  .2));
+    }
+
+    100% {
+        background-image: linear-gradient(to right, rgba($color-black,  .0), rgba($color-black,  .0));
+        width: 0;
+        height: 0;
+        border-radius: 300px;
+        border-top-right-radius: 0;
+    }
+}
+@keyframes just-once {
+    to {
+        display: none
+    }
+}

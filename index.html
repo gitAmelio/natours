@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
+    <title>Natours</title>
+    <style>
+        .js-loading *:not(#loading, #spinner),
+        .js-loading *:before,
+        .js-loading *:after {
+          display: none;
+          animation-play-state: paused !important;
+        }
+        .navigation__background {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+        document.body.classList.add('js-loading');
+  
+        window.addEventListener("load", showPage);
+  
+        function showPage() {
+            document.body.classList.remove('js-loading');
+        }
+      </script>
+    <div id="loading" class="" >
+         <div id="spinner"></div>
+    </div>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" name="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <div id="navigation__background" class="navigation__background" >&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#about" class="navigation__link"><span></span>About Natous</a></li>
+                <li class="navigation__item"><a href="#features" class="navigation__link"><span></span>Your benifits</a></li>
+                <li class="navigation__item"><a href="#tours" class="navigation__link"><span></span>Popular tours</a></li>
+                <li class="navigation__item"><a href="#stories" class="navigation__link"><span></span>Stories</a></li>
+                <li class="navigation__item"><a href="#book" class="navigation__link"><span></span>Book now</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header">
+        <div class="intro">
+            <h1 class="theme h1-3d"> OUTDOORS</h1>
+            <p class="some-stuff h3-3d">IS WHERE LIFE HAPPENS</p>
+        </div>
+        <div class="button">discover our tours</div>
+        <!-- <div class="btn">discover our tours</div> -->
+    </header>
+    
+    <main>
+        <div class="hero-image">
+            
+            <div class="box box--1" style="--col:1">
+                <input  style="--j:1" type="radio" class="box__input box__input--1" id="box1__side-1" name="box__side">
+                <input  style="--j:2" type="radio" class="box__input box__input--2" id="box1__side-2" name="box__side">
+                <input  style="--j:3" type="radio" class="box__input box__input--3" id="box1__side-3" name="box__side">
+                <input  style="--j:4" type="radio" class="box__input box__input--4" id="box1__side-4" name="box__side">
+                <input  style="--j:5" type="radio" class="box__input box__input--5" id="box1__side-5" name="box__side">
+                <input  style="--j:6" type="radio" class="box__input box__input--6" id="box1__side-6" name="box__side">
+                <div class="box__image box__image--prism">
+                    <div class="box__image--axes box__image--axes--prism">
+                        <span style="--j:1" class="h prism">
+                            <label for="box1__side-1" class="box__side box__side-1 box__side--prism"></label>
+                        </span>
+                        <span style="--j:2" class="h prism">
+                            <label for="box1__side-2" class="box__side box__side-2 box__side--prism"></label>
+                        </span>
+                        <span style="--j:3" class="h prism">
+                            <label for="box1__side-3" class="box__side box__side-3 box__side--prism"></label>
+                        </span>
+                        <span style="--j:4" class="h prism">
+                            <label for="box1__side-4" class="box__side box__side-4 box__side--prism"></label>
+                        </span>
+                        <span style="--i:3" class="v prism">
+                            <label for="box1__side-5" class="box__side box__side-5 box__side--prism"></label>
+                        </span>
+                        <span style="--i:1" class="v prism">
+                            <label for="box1__side-6" class="box__side box__side-6 box__side--prism"></label>
+                        </span>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="box box--2" style="--col:2">
+                <input  style="--j:1" type="radio" class="box__input box__input--1" id="box2__side-1" name="box2__side">
+                <input  style="--j:2" type="radio" class="box__input box__input--2" id="box2__side-2" name="box2__side">
+                <input  style="--j:3" type="radio" class="box__input box__input--3" id="box2__side-3" name="box2__side">
+                <input  style="--j:4" type="radio" class="box__input box__input--4" id="box2__side-4" name="box2__side">
+                <input  style="--j:5" type="radio" class="box__input box__input--5" id="box2__side-5" name="box2__side">
+                <input  style="--j:6" type="radio" class="box__input box__input--6" id="box2__side-6" name="box2__side">
+                <div class="box__image box__image--prism">
+                    <div class="box__image--axes box__image--axes--prism">
+                        <span style="--j:1" class="h prism">
+                            <label for="box2__side-1" class="box__side box__side-1 box__side--prism"></label>
+                        </span>
+                        <span style="--j:2" class="h prism">
+                            <label for="box2__side-2" class="box__side box__side-2 box__side--prism"></label>
+                        </span>
+                        <span style="--j:3" class="h prism">
+                            <label for="box2__side-3" class="box__side box__side-3 box__side--prism"></label>
+                        </span>
+                        <span style="--j:4" class="h prism">
+                            <label for="box2__side-4" class="box__side box__side-4 box__side--prism"></label>
+                        </span>
+                        <span style="--i:3" class="v prism">
+                            <label for="box2__side-5" class="box__side box__side-5 box__side--prism"></label>
+                        </span>
+                        <span style="--i:1" class="v prism">
+                            <label for="box2__side-6" class="box__side box__side-6 box__side--prism"></label>
+                        </span>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="box box--3" style="--col:3">
+                <input  style="--j:1" type="radio" class="box__input box__input--1" id="box3__side-1" name="box3__side">
+                <input  style="--j:2" type="radio" class="box__input box__input--2" id="box3__side-2" name="box3__side">
+                <input  style="--j:3" type="radio" class="box__input box__input--3" id="box3__side-3" name="box3__side">
+                <input  style="--j:4" type="radio" class="box__input box__input--4" id="box3__side-4" name="box3__side">
+                <input  style="--j:5" type="radio" class="box__input box__input--5" id="box3__side-5" name="box3__side">
+                <input  style="--j:6" type="radio" class="box__input box__input--6" id="box3__side-6" name="box3__side">
+                <div class="box__image box__image--prism">
+                    <div class="box__image--axes box__image--axes--prism">
+                        <span style="--j:1" class="h prism">
+                            <label for="box3__side-1" class="box__side box__side-1 box__side--prism"></label>
+                        </span>
+                        <span style="--j:2" class="h prism">
+                            <label for="box3__side-2" class="box__side box__side-2 box__side--prism"></label>
+                        </span>
+                        <span style="--j:3" class="h prism">
+                            <label for="box3__side-3" class="box__side box__side-3 box__side--prism"></label>
+                        </span>
+                        <span style="--j:4" class="h prism">
+                            <label for="box3__side-4" class="box__side box__side-4 box__side--prism"></label>
+                        </span>
+                        <span style="--i:3" class="v prism">
+                            <label for="box3__side-5" class="box__side box__side-5 box__side--prism"></label>
+                        </span>
+                        <span style="--i:1" class="v prism">
+                            <label for="box3__side-6" class="box__side box__side-6 box__side--prism"></label>
+                        </span>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="box box--4" style="--col:4">
+                <input  style="--j:1" type="radio" class="box__input box__input--1" id="box4__side-1" name="box4__side">
+                <input  style="--j:2" type="radio" class="box__input box__input--2" id="box4__side-2" name="box4__side">
+                <input  style="--j:3" type="radio" class="box__input box__input--3" id="box4__side-3" name="box4__side">
+                <input  style="--j:4" type="radio" class="box__input box__input--4" id="box4__side-4" name="box4__side">
+                <input  style="--j:5" type="radio" class="box__input box__input--5" id="box4__side-5" name="box4__side">
+                <input  style="--j:6" type="radio" class="box__input box__input--6" id="box4__side-6" name="box4__side">
+                <div class="box__image box__image--prism">
+                    <div class="box__image--axes box__image--axes--prism">
+                        <span style="--j:1" class="h prism">
+                            <label for="box4__side-1" class="box__side box__side-1 box__side--prism"></label>
+                        </span>
+                        <span style="--j:2" class="h prism">
+                            <label for="box4__side-2" class="box__side box__side-2 box__side--prism"></label>
+                        </span>
+                        <span style="--j:3" class="h prism">
+                            <label for="box4__side-3" class="box__side box__side-3 box__side--prism"></label>
+                        </span>
+                        <span style="--j:4" class="h prism">
+                            <label for="box4__side-4" class="box__side box__side-4 box__side--prism"></label>
+                        </span>
+                        <span style="--i:3" class="v prism">
+                            <label for="box4__side-5" class="box__side box__side-5 box__side--prism"></label>
+                        </span>
+                        <span style="--i:1" class="v prism">
+                            <label for="box4__side-6" class="box__side box__side-6 box__side--prism"></label>
+                        </span>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="box box--5" style="--col:5">
+                <input  style="--j:1" type="radio" class="box__input box__input--1" id="box5__side-1" name="box5__side">
+                <input  style="--j:2" type="radio" class="box__input box__input--2" id="box5__side-2" name="box5__side">
+                <input  style="--j:3" type="radio" class="box__input box__input--3" id="box5__side-3" name="box5__side">
+                <input  style="--j:4" type="radio" class="box__input box__input--4" id="box5__side-4" name="box5__side">
+                <input  style="--j:5" type="radio" class="box__input box__input--5" id="box5__side-5" name="box5__side">
+                <input  style="--j:6" type="radio" class="box__input box__input--6" id="box5__side-6" name="box5__side">
+                <div class="box__image box__image--prism">
+                    <div class="box__image--axes box__image--axes--prism">
+                        <span style="--j:1" class="h prism">
+                            <label for="box5__side-1" class="box__side box__side-1 box__side--prism"></label>
+                        </span>
+                        <span style="--j:2" class="h prism">
+                            <label for="box5__side-2" class="box__side box__side-2 box__side--prism"></label>
+                        </span>
+                        <span style="--j:3" class="h prism">
+                            <label for="box5__side-3" class="box__side box__side-3 box__side--prism"></label>
+                        </span>
+                        <span style="--j:4" class="h prism">
+                            <label for="box5__side-4" class="box__side box__side-4 box__side--prism"></label>
+                        </span>
+                        <span style="--i:3" class="v prism">
+                            <label for="box5__side-5" class="box__side box__side-5 box__side--prism"></label>
+                        </span>
+                        <span style="--i:1" class="v prism">
+                            <label for="box5__side-6" class="box__side box__side-6 box__side--prism"></label>
+                        </span>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="box box--6" style="--col:6">
+                <input  style="--j:1" type="radio" class="box__input box__input--1" id="box6__side-1" name="box6__side">
+                <input  style="--j:2" type="radio" class="box__input box__input--2" id="box6__side-2" name="box6__side">
+                <input  style="--j:3" type="radio" class="box__input box__input--3" id="box6__side-3" name="box6__side">
+                <input  style="--j:4" type="radio" class="box__input box__input--4" id="box6__side-4" name="box6__side">
+                <input  style="--j:5" type="radio" class="box__input box__input--5" id="box6__side-5" name="box6__side">
+                <input  style="--j:6" type="radio" class="box__input box__input--6" id="box6__side-6" name="box6__side">
+                <div class="box__image box__image--prism">
+                    <div class="box__image--axes box__image--axes--prism">
+                        <span style="--j:1" class="h prism">
+                            <label for="box6__side-1" class="box__side box__side-1 box__side--prism"></label>
+                        </span>
+                        <span style="--j:2" class="h prism">
+                            <label for="box6__side-2" class="box__side box__side-2 box__side--prism"></label>
+                        </span>
+                        <span style="--j:3" class="h prism">
+                            <label for="box6__side-3" class="box__side box__side-3 box__side--prism"></label>
+                        </span>
+                        <span style="--j:4" class="h prism">
+                            <label for="box6__side-4" class="box__side box__side-4 box__side--prism"></label>
+                        </span>
+                        <span style="--i:3" class="v prism">
+                            <label for="box6__side-5" class="box__side box__side-5 box__side--prism"></label>
+                        </span>
+                        <span style="--i:1" class="v prism">
+                            <label for="box6__side-6" class="box__side box__side-6 box__side--prism"></label>
+                        </span>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="box box--7" style="--col:7">
+                <input  style="--j:1" type="radio" class="box__input box__input--1" id="box7__side-1" name="box7__side">
+                <input  style="--j:2" type="radio" class="box__input box__input--2" id="box7__side-2" name="box7__side">
+                <input  style="--j:3" type="radio" class="box__input box__input--3" id="box7__side-3" name="box7__side">
+                <input  style="--j:4" type="radio" class="box__input box__input--4" id="box7__side-4" name="box7__side">
+                <input  style="--j:5" type="radio" class="box__input box__input--5" id="box7__side-5" name="box7__side">
+                <input  style="--j:6" type="radio" class="box__input box__input--6" id="box7__side-6" name="box7__side">
+                <div class="box__image box__image--prism">
+                    <div class="box__image--axes box__image--axes--prism">
+                        <span style="--j:1" class="h prism">
+                            <label for="box7__side-1" class="box__side box__side-1 box__side--prism"></label>
+                        </span>
+                        <span style="--j:2" class="h prism">
+                            <label for="box7__side-2" class="box__side box__side-2 box__side--prism"></label>
+                        </span>
+                        <span style="--j:3" class="h prism">
+                            <label for="box7__side-3" class="box__side box__side-3 box__side--prism"></label>
+                        </span>
+                        <span style="--j:4" class="h prism">
+                            <label for="box7__side-4" class="box__side box__side-4 box__side--prism"></label>
+                        </span>
+                        <span style="--i:3" class="v prism">
+                            <label for="box7__side-5" class="box__side box__side-5 box__side--prism"></label>
+                        </span>
+                        <span style="--i:1" class="v prism">
+                            <label for="box7__side-6" class="box__side box__side-6 box__side--prism"></label>
+                        </span>
+                    </div>
+                </div>  
+            </div>
+
+        </div>
+        
+        <section class="section-about" id="about">
+            <!-- <div class="u-center-text u-margin-bottom-big"> -->
+            <div class="u-gc-1-end u-js-c">
+                <h2 class="heading-secondary h2-3d" style="--s:45rem">
+                    Exciting tours for adventurous people
+                </h2>
+            </div>
+
+            <!-- <div class="u-gc-1-span-end u-dg "> -->
+            <div id="section-detail"   class="section-about__detail">
+                <!-- <div class="u-gc-1-span-1 u-df-fdc u-media-padding about detail"> -->
+                <div class="section-about__detail--text detail">
+                    <h3  class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature</h3>
+                    <p class="paragraph">
+                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia odit deserunt aspernatur consequuntur fuga. Consectetur esse sint nulla itaque molestias animi, rem, dolor, unde deleniti reprehenderit error blanditiis rerum.
+                    </p>
+
+                    <h3 class="heading-tertiary u-margin-bottom-small">Live adventures like you never have before</h3>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia odit deserunt aspernatur consequuntur fuga.
+                    </p>
+                    <a href="#" class="btn-text">Learn more &rarr;</a>
+                </div>
+                <!-- <div class="u-gc-2-span-1 u-2-columns u-media-padding"> -->
+                <div class="section-about__detail--composition">
+                    <div class="composition">
+                        <!-- resolution and desity switching -->
+                        <!-- <img srcset="path/image-width-300 300w, path/image-width-1000w"
+                             sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                             alt="Photo 1"
+                             class=""
+                             src="path/catch-image">     -->
+
+                        <!-- <img src="./images/image-1.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <img src="./images/image-2.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                        <img src="./images/image-3.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
+                       
+
+                        <input  style="--j:1" type="radio" class="cube__input cube__input--1" id="b__side-1" name="b__side">
+                        <input  style="--j:2" type="radio" class="cube__input cube__input--2" id="b__side-2" name="b__side">
+                        <input  style="--j:3" type="radio" class="cube__input cube__input--3" id="b__side-3" name="b__side">
+                        <input  style="--j:4" type="radio" class="cube__input cube__input--4" id="b__side-4" name="b__side">
+                        <input  style="--j:5" type="radio" class="cube__input cube__input--5" id="b__side-5" name="b__side">
+                        <input  style="--j:6" type="radio" class="cube__input cube__input--6" id="b__side-6" name="b__side">
+
+
+                        <label class="image-view--1 image-label" for="b__side-1">
+                            <img src="../img/box2-image-1.jpg" class="image-view"></img>
+                        </label>
+                        <label class="image-view--2 image-label" for="b__side-2">
+                            <img src="../img/box2-image-2.jpg" class="image-view"></img>
+                        </label>
+                        <label class="image-view--3 image-label" for="b__side-3">
+                            <img src="../img/box2-image-3.jpg" class="image-view"></img>
+                        </label>
+                        <label class="image-view--4 image-label" for="b__side-4">
+                            <img src="../img/box2-image-4.jpg" class="image-view"></img>
+                        </label>
+                        <label class="image-view--5 image-label" for="b__side-5">
+                            <img src="../img/box2-image-5.jpg" class="image-view"></img>
+                        </label>
+                        <label class="image-view--6 image-label" for="b__side-6">
+                            <img src="../img/box2-image-6.jpg" class="image-view"></img>    
+                        </label>    
+                        <div class="box box--1" style="--size:45rem">
+                            <div class="box__image box__image--cube">
+                                <div class="box__image--axes box__image--axes--cube">
+                                    <span style="--j:1" class="h cube">
+                                        <label for="b__side-1" class="box__side box__side-1 box__side--cube"></label>
+                                    </span>
+                                    <span style="--j:2" class="h cube">
+                                        <label for="b__side-2" class="box__side box__side-2 box__side--cube"></label>
+                                    </span>
+                                    <span style="--j:3" class="h cube">
+                                        <label for="b__side-3" class="box__side box__side-3 box__side--cube"></label>
+                                    </span>
+                                    <span style="--j:4" class="h cube">
+                                        <label for="b__side-4" class="box__side box__side-4 box__side--cube"></label>
+                                    </span>
+                                    <span style="--i:3" class="v cube bottom">
+                                        <label for="b__side-5" class="box__side box__side-5 box__side--cube"></label>
+                                    </span>
+                                    <span style="--i:1" class="v cube top">
+                                        <label for="b__side-6" class="box__side box__side-6 box__side--cube"></label>
+                                    </span>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section-features" id="features">
+            <div class="section-features__row">
+                <div class="feature">
+                    <div class="feature-box">
+                        <svg class="feature__icon">
+                            <use xlink:href="img/icons.svg#icon-globe"></use>
+                        </svg>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia odit deserunt aspernatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-box">
+                        <svg class="feature__icon">
+                            <use xlink:href="img/icons.svg#icon-tree"></use>
+                        </svg>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Meet nature</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia odit deserunt aspernatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-box">
+                        <svg class="feature__icon">
+                            <use xlink:href="img/icons.svg#icon-compass"></use>
+                        </svg>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Find your way</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia odit deserunt aspernatur.
+                        </p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-box">
+                        <svg class="feature__icon">
+                            <use xlink:href="img/icons.svg#icon-heart"></use>
+                        </svg>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Live a healthier life</h3>
+                        <p class="feature-box__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quia odit deserunt aspernatur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <section class="section-tours" id="tours">
+            <div class="section-tours__heading">
+                <h2 class="heading-secondary h2-3d" style="--s:30rem">
+                    Most popular tours
+                </h2>
+            </div>
+
+            <div class="section-tours__cards">
+                <!-- <div class="col-1-of-3"> -->
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--1">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--1">
+                                    Make Nature Home
+                                </span>
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li>3 day tours</li>
+                                    <li>Up to 30 people</li>
+                                    <li>Sleep in cozy hotels</li>
+                                    <li>2 tour guides</li>
+                                    <li>Difficulty: easy</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back  card__side--back-1">
+                            <div class="card__cta">
+                                <div class="card__price-box">
+                                    <p class="card__price-only">Only</p>
+                                    <p class="card__price-value">$297</p>
+                                </div>
+                                <a href="#popup" class="btn btn--card cta-btn--white">Book now!</a>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+                <!-- <div class="col-1-of-3"> -->
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--2">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--2">
+                                    The forest hiker
+                                </span>
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li>7 day tour</li>
+                                    <li>Up to 40 people</li>
+                                    <li>Sleep in provied tents</li>
+                                    <li>6 tour guides</li>
+                                    <li>Difficulty: medium</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back  card__side--back-2">
+                            <div class="card__cta">
+                                <div class="card__price-box">
+                                    <p class="card__price-only">Only</p>
+                                    <p class="card__price-value">$497</p>
+                                </div>
+                                <a href="#popup" class="btn btn--card cta-btn--white">Book now!</a>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+                <!-- <div class="col-1-of-3"> -->
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--3">
+                                &nbsp;
+                            </div>
+                            <h4 class="card__heading">
+                                <span class="card__heading-span card__heading-span--3">
+                                    The outdoor adventure
+                                </span>
+                            </h4>
+                            <div class="card__details">
+                                <ul>
+                                    <li>5 day tour</li>
+                                    <li>Up to 15 people</li>
+                                    <li>Sleep in provied tents</li>
+                                    <li>2 tour guides</li>
+                                    <li>Difficulty: hard</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card__side card__side--back  card__side--back-3">
+                            <div class="card__cta">
+                                <div class="card__price-box">
+                                    <p class="card__price-only">Only</p>
+                                    <p class="card__price-value">$897</p>
+                                </div>
+                                <a href="#popup" class="btn btn--card cta-btn--white">Book now!</a>
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+
+            <div class="section-tours__cta">
+                <a href="#" class="btn btn--tours">Discover all tours</a>
+            </div>
+        </section>
+
+        <section class="section-stories" id="stories">
+ 
+            <!-- <div class="section-stories__bg-video">
+                <video class="section-stories__bg-content" autoplay muted loop>
+                    <source src="/img/mov-1.mp4" type="video/mp4">
+                </video>
+            </div> -->
+           
+
+            <div class="section-stories__content">
+                <div class="section-stories__heading">
+                    <h2 class="heading-secondary h2-3d" style="--s:65rem" >
+                        We make people genuinely happy
+                    </h2>
+                </div>
+
+
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="./img/person-1.jpg" alt="Person on a tour" class="story__img">
+                        <figcaption class="story__caption">Mary Smith</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur orro, blanditiis quasi! Maiores fugiat nesciunt mollitia soluta est beatae voluptate fugit sit commodi, consequuntur eos. Nisi quam veritatis totam ea alias! Porro, blanditiis quasi! Maior, consequuntur eos. Nisi quam veritatis totam ea alias!</p>
+                    </div>
+                </div>
+
+
+
+                <div class="story">
+                    <figure class="story__shape">
+                        <img src="./img/person-2.jpg" alt="Person on a tour" class="story__img">
+                        <figcaption class="story__caption">Jack Wilson</figcaption>
+                    </figure>
+                    <div class="story__text">
+                        <h3 class="heading-tertiary u-margin-bottom-small">WOW! My life is completely different now</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur orro, blanditiis quasi! Maiores fugiat nesciunt mollitia soluta est beatae voluptate fugit sit commodi, consequuntur eos. Nisi quam veritatis totam ea alias! Porro, blanditiis quasi! Maior, consequuntur eos. Nisi quam veritatis totam ea alias!</p>
+                    </div>
+                </div>
+
+
+                <div class="section-stories__btn">
+                    <a href="#" class="btn-text">Read all stories &rarr;</a>
+                </div>
+            </div>
+      
+        </section>
+
+        <section class="section-book" id="book" >
+
+                <div class="book">
+                    <div class="book__form">
+                        <form action="" class="form">
+                            <div class="form__heading">
+                                <h2 class="heading-secondary h2-3d" style="--s:30rem;">
+                                    Start booking now
+                                </h2>
+                            </div>
+                            
+                            <div class="form__group">
+                                <input type="text" class="form__input" placeholder="Full name" id="name" required>
+                                <label for="name" class="form__label">Full name</label>
+                            </div>
+                            
+                            <div class="form__group">
+                                <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                                <label for="email" class="form__label">Email address</label>
+                            </div>
+
+                            <div class="form__group u-margin-bottom-medium">
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="small" name="size">
+                                    <label for="small" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Small tour group
+                                    </label>
+                                </div>
+                                <div class="form__radio-group">
+                                    <input type="radio" class="form__radio-input" id="large" name="size">
+                                    <label for="large" class="form__radio-label">
+                                        <span class="form__radio-button"></span>
+                                        Large tour group
+                                    </label>
+                                </div>
+                            </div>
+
+
+                            <div class="form__group">
+                                <button class="btn btn--form">Next step &rarr;</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <!-- art direction -->
+                <!-- side-note: use ems for media queries "break-width/16"  -->
+                <!-- <picture>
+                    <source srcset="./img/logo-1.png 1x, ./img/logo-1.png 2x" media="(max-width: 37.5em)" src="./img/logo-1.png">
+                    <img srcset="./img/logo-2.png 1x, ./img/logo-2.png 2x" alt="" src="./img/logo-2.png">
+                </picture> -->
+                <picture>
+                    <source srcset="./img/logo-1.png 1x, ./img/logo-1.png 10x" media="(max-width: 37.5em)" src="./img/logo-1.png">
+                    <img srcset="./img/logo-2.png 1x, ./img/logo-2.png 5x" alt="" src="./img/logo-2.png">
+                </picture>
+
+                <!-- density switching < srcset="image-1x.png 1x, image-2x 2x" > -->
+                <!-- <img src="" alt="Full logo" class="footer__logo"> -->
+            </div>
+            <div class="footer__text">
+
+                    <div class="footer__navigation">
+                        <div class="ul footer__list">
+                            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Careers</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+                            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                        </div>
+                    </div>
+
+                    <div class="footer__copyright">
+                        
+                        <p>
+                            © 2021 - Developed by <a href=https://github.com/gitAmelio target="_blank">Amelio Croza</a>
+                            This website is based off a project from the online course <a href="#" class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Natours. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author is of course highly appreciated!
+                        </p>
+                    </div>
+
+            </div>
+        </footer>
+
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <div class="popup__img popup__img--1"></div>
+                    <div class="popup__img popup__img--2"></div>
+                    <!-- <img class="popup__img" src="./img/image-11.jpg" alt="">
+                    <img class="popup__img" src="./img/autumn-wallpaper-1920x1200-55962 (1).jpg" alt=""> -->
+                </div>
+                <div class="popup__right">
+                    <a href="#tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small h2-3d">Start booking now</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; please read these terms before booking</h3>
+                    <p class="popup__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae minima harum sit a ab dignissimos repellendus illum. Asperiores fugiat quod mollitia eos consequuntur dignissimos doloremque! Explicabo nihil officia adipisci nobis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae minima harum sit a ab dignis.
+                    </p>
+                    <a href="#tours" class="btn">Book now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <svg class="effects">
+        <filter id="wavy">
+         <feTurbulence x="0" y="0" baseFrequency="0.02"  numOctaves="5" seed="2"/>
+         <feDisplacementMap in="SourceGraphic"  scale="30"/>
+        </filter>
+        <filter id="wavy-fine">
+         <feTurbulence x="0" y="0" baseFrequency="0.04"  numOctaves="5" seed="2"/>
+         <feDisplacementMap in="SourceGraphic"  scale="30"/>
+        </filter>
+     </svg>
+     <!-- <svg class="effects">
+
+     </svg> -->
+
+
+
+
+
+
+
+    <!-- <div class="orbitable-gallery" >
+        <input  style="--i:1" type="radio" class="input__checked input__checked--1" placeholder="Full name" id="image-1" name="image">
+        <input  style="--i:2" type="radio" class="input__checked input__checked--2" placeholder="Full name" id="image-2" name="image">
+        <input  style="--i:3" type="radio" class="input__checked input__checked--3" placeholder="Full name" id="image-3" name="image" src="img/gallery-image-1.jpg">
+        <input  style="--i:4" type="radio" class="input__checked input__checked--4" placeholder="Full name" id="image-4" name="image">
+        <input  style="--i:5" type="radio" class="input__checked input__checked--5" placeholder="Full name" id="image-5" name="image">
+        <input  style="--i:6" type="radio" class="input__checked input__checked--6" placeholder="Full name" id="image-6" name="image">
+        <input  style="--i:7" type="radio" class="input__checked input__checked--7" placeholder="Full name" id="image-7" name="image">
+        <input  style="--i:8" type="radio" class="input__checked input__checked--8" placeholder="Full name" id="image-8" name="image">
+        <div class="gallery">
+            <div class="box">
+                <span style="--i:1">
+                    <label for="image-1" class="form__radio-label">
+                        <img for="image-1" src="img/gallery-image-1.jpg" alt="">
+                    </label>
+                </span>
+                <span style="--i:2">
+                    <label for="image-2" class="form__radio-label">
+                        <img src="img/gallery-image-2.jpg" alt="">
+                    </label>
+                </span>
+                <span style="--i:3">
+                    <label for="image-3" class="form__radio-label">
+                        <img src="img/gallery-image-3.jpg" alt="">
+                    </label>
+                </span>
+                <span style="--i:4">
+                    <label for="image-4" class="form__radio-label">
+                        <img src="img/gallery-image-4.jpg" alt="">
+                    </label>
+                </span>
+                <span style="--i:5">
+                    <label for="image-5" class="form__radio-label">
+                        <img src="img/gallery-image-5.jpg" alt="">
+                    </label>
+                </span>
+                <span style="--i:6">
+                    <label for="image-6" class="form__radio-label">
+                        <img src="img/gallery-image-6.jpg" alt="">
+                    </label>
+                </span>
+                <span style="--i:7">
+                    <label for="image-7" class="form__radio-label">
+                    <img src="img/gallery-image-7.jpg" alt="">
+                </span>
+                <span style="--i:8">
+                    <label for="image-8" class="form__radio-label">
+                    <img src="img/gallery-image-8.jpg" alt="">
+                </span>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <script src="scrypt.js"></script>
+</body>
+
+</html>

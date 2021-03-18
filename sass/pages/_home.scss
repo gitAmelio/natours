@@ -1,0 +1,317 @@
+
+.section-about {
+    grid-column: 1/-1;
+
+    color: rgb(46, 39, 39);
+    color: $palette1-color-5;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+
+    
+    &__detail {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-self: center;
+        padding: 0 10rem;
+        grid-column-gap: 10rem;
+        grid-column: 1/-1;
+
+
+
+
+        @include respond(tab-between) { 
+            padding: 0 10rem;
+            grid-column-gap: 10rem;
+        }
+    
+        @include respond(tab-port) { 
+            grid-template-columns: auto;
+            padding: 0 10rem;
+            grid-column-gap: 5rem;
+        }
+        @include respond(tab-less) { 
+            padding: 0 5rem;
+            grid-column-gap: 5rem;
+        }
+        width: 100vw;
+
+        &--text {
+            
+            grid-column: 1 / span 1;
+
+            p:not(:last-child) {
+                margin-bottom: 5rem;
+                font-size: 1.7rem;
+                line-height: 1.7;
+            }
+            @include respond(tab-port) { 
+                margin: 0 1rem;
+            }
+
+            a {
+                color: $palette1-color-4;
+            }
+        }
+
+        &--composition {
+           
+            display: flex;
+            align-content: center;
+            margin: auto;
+
+            @include respond(tab-port) { 
+                grid-column: 1/-1;
+                grid-row: 1;
+                margin-bottom: 8rem;
+            }
+
+            & .composition {
+                display: grid;
+
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 40rem 6rem;
+                grid-row-gap: 6rem;
+                justify-items: center;
+                align-items: center;
+                
+                & .box--1 {
+                    grid-column: 1/-1;
+                    grid-row: 1;
+                }
+                @include respond(tab-port) { 
+                    grid-template-columns: auto auto;
+                    grid-template-rows: repeat(6 ,6rem);
+                    grid-gap: 4rem;
+                    & .box--1 {
+                        grid-column: 2 / span 1;
+                        grid-row: 1/-1;
+                        --size: 60rem !important;
+                    }
+                }
+                @include respond(tab-less) { 
+                    grid-template-columns: auto auto;
+                    grid-template-rows: repeat(6 ,6rem);
+                    grid-gap: 5rem;
+                    & .box--1 {
+                        grid-column: 2 / span 1;
+                        grid-row: 1/-1;
+                        --size: 60rem !important;
+                    }
+                }
+                @include respond(phone) { 
+                    & .box--1 {
+                        --size: 35rem !important;
+                    }
+                }
+
+
+            }
+
+        }
+    }
+}
+
+.section-tours {
+    display: grid;
+    grid-column: 1 / -1;
+
+
+    &__heading {
+        grid-column: 1 /-1;
+        grid-row: 1;
+        justify-self: center;
+    }
+
+    &__cards {
+        grid-column: 1 /-1;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include respond(tab-port){
+           display: flex;
+           flex-direction: column;
+        }
+  
+        grid-gap: 8rem;
+        padding: 0 8rem;
+    }
+
+    &__cta {
+        grid-column: 1 /-1;
+        grid-row: 3;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.section-stories {
+    display: grid;
+    grid-column: 1 / -1;
+    position: relative;
+    justify-self: center;
+        
+    @include broken-3d-gap;
+ 
+    &::before {
+        background-color:transparent;
+        background-image: linear-gradient(             
+            to right bottom,
+            rgba($palette1-color-3, 1),           
+            rgba($palette1-color-3, 0.5) 
+        );
+    }
+
+
+    &__bg-content {
+
+        height: 100%;
+        width: 100vw;
+        object-fit: cover;
+        z-index: -10;
+        padding: 0 10rem;
+
+    }
+
+    &__content {
+        grid-column:  1/ -1;
+        grid-row: 1;
+        width: 100vw;
+
+        display: grid;
+        grid-gap: 8rem;
+        padding: 10rem;
+
+        @include respond(phone) {
+            padding: 5rem;
+        }
+        
+     }
+
+
+     &__heading {
+        grid-column: 1 /-1;
+        justify-self: center;
+
+        & h2 {
+            margin-top: 1rem;
+            margin-bottom: 0;
+            @include text-3d(#f5f5f5, h_2)
+        }
+    }
+
+    .story {
+        grid-column: 1 /-1;
+        justify-self: center;
+        background-color: rgba($palette1-color-2, 1);
+        background-color: #0F1110;
+        color: #EAF2D7;
+        background-color:#0F1110;
+    }
+
+    &__btn {
+        height: 10rem;
+        text-align: center;
+        a {
+            color: white;
+            font-size: 1.7rem;
+            font-family: sans-serif;
+            text-decoration: none;
+            border-bottom: 3px solid $color-white;
+            padding-bottom: 1rem;
+
+        }
+    }
+    
+}
+
+.section-book {
+    grid-column: 1/ -1;
+    justify-self: center;
+
+}
+
+.footer {
+    grid-column: 1/-1;
+    justify-self: center;
+    background-color: rgba($palette1-color-2, 1);
+    background-color: $palette1-color-1;
+    
+    display: grid;
+
+    &__logo {
+        grid-row: 1;
+    }
+    
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+.composition {
+    z-index: 1;
+    position: relative;
+    & .box--1 {
+        width: var(--size);
+        height: var(--size);
+    }
+}
+
+.book {
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1 /-1;
+    position: relative;
+    width: 80vw;
+    color: $palette1-color-4;
+
+    background-image: linear-gradient(
+        90deg, 
+        rgba($palette1-color-1, .9) 0%,
+        rgba($palette1-color-1, .9) 70%,
+        transparent 70%
+    )
+    , url(/img/image-10.jpg);
+    background-size: cover;
+    border-radius: 45px;
+    margin: 8rem;
+    box-shadow:       -5px -5px 10px 1px rgba($color-white_0_2, 0.63), 
+                inset -5px -5px  5px 1px $color-white_0_2, 
+                       5px  5px 10px 5px $color-black_0_4, 
+                inset  5px  5px  5px 1px $color-black_0_4;
+
+
+    @include respond(tab-port){
+        background-image: linear-gradient(
+            90deg, 
+            rgba($palette1-color-1, .9) 0%,
+            rgba($palette1-color-1, .9) 100%,
+            transparent 100%
+        )
+        , url(/img/image-10.jpg);
+        background-size: cover;
+    }
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+
+        & .btn {
+            color: $palette1-color-4;
+        }
+
+        @include respond(tab-port){
+            width: 60%;
+            padding: 4rem;
+        }
+        @include respond(phone){
+            width: 75%;
+            padding: 4rem;
+        }
+
+    }
+}

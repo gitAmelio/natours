@@ -1,0 +1,119 @@
+.header {
+    &:before {
+        content: '';
+
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        right: 2rem;
+        width: 95vw;
+        height: 95%;
+
+        border-top: 1px solid #ffffff45;
+        border-left: 1px solid #ffffff40;
+        border-bottom: 1px solid #ffffff14;
+        border-right: 1px solid #ffffff1c;
+
+        background-image: linear-gradient(to right, rgba( #fff, 0.03), rgba( #fff, 0.05));
+ 
+        filter: url(#wavy);
+
+        @include respond(tab-port) { 
+            top: .5rem;
+            left: .5rem;
+            right: .5rem;
+        }
+    }
+    padding: 8rem;
+
+    @include respond(tab-port) { 
+        padding: 1rem;
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: ($block-width/0.208333333) + 12rem;
+
+    z-index: 100;
+    
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat( 5, 1fr);
+    justify-content: center;
+    align-items: center;
+
+    .intro {
+        grid-row: 2 / span 1;
+        grid-column: 2 / 8;
+        z-index: 12;
+    }
+
+    h1 {
+        text-align:center;
+        
+        transition: tranform .2s cubic-bezier(0.86, 0, 0.07, 1);
+        animation: fade-in-right  1s ;
+    }
+    & p {
+        text-align:center;
+        color: $palette1-color-3;
+       
+        transition: tranform .2s cubic-bezier(0.86, 0, 0.07, 1);
+        animation: fade-in-left 1s ;
+    }
+    .button {
+        grid-row: 3;
+        grid-column: 4/ 6;
+        transition: tranform .4s cubic-bezier(0.86, 0, 0.07, 1);
+        animation: fade-in-up  1s   .4s backwards;
+        width: 30rem;
+        backdrop-filter: blur(10px);
+        
+        @extend  .btn;
+        
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes fade-in-right {
+    0% {
+        transform: translateX(-10rem);
+        opacity: .2;
+    }
+    80% {
+        transform: translateX(1rem);
+        opacity: .8;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-left {
+    0% {
+        transform: translateX(10rem);
+        opacity: .2;
+    }
+    80% {
+        transform: translateX(-1rem);
+        opacity: .8;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

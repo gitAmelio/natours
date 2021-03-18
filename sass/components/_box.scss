@@ -1,0 +1,176 @@
+.hero-image {
+    --block-width: 12rem;
+    position: relative;
+    margin: 7rem;
+    margin-bottom: 15rem;
+
+    @include respond(tab-port) { 
+        --block-width: 9rem;
+        margin-top: 12rem;
+    }
+
+    -webkit-box-reflect: below 15px linear-gradient(transparent, transparent, $color-black_0_2);
+
+    grid-column: 1/-1;
+    justify-content: center;
+
+    height: calc(var(--block-width)/0.208333333);
+
+    display: grid;
+    grid-template-columns: repeat(7, var(--block-width));
+    grid-template-rows: 1fr;
+    grid-gap: 2rem;
+     z-index: -100;
+}
+
+.cube__input {
+    display: none;
+}
+
+.box {
+  
+    height: 100px;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    position: relative;
+    z-index: -80;
+    
+    &__input {
+        transform: translate(0, 800px);
+        display: none;
+    }
+  
+    &__side {
+        
+        &--prism {
+            width:  var(--block-width);
+            height: calc(var(--block-width)/0.208333333);
+            background-position-x: calc(var(--col) * 13.02%);
+        }
+        &--cube {
+            width: var(--size);
+            height: var(--size);
+            background-position-x: center;
+        }
+        
+        position: absolute;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        background-size: cover;
+    }
+    
+    &__image {
+        position: relative;
+        
+        &--prism {
+            height: calc(var(--block-width) /0.208333333);
+            width: var(--block-width);
+        }
+
+        &--cube {
+            width: var(--size);
+            height: var(--size);
+        }
+
+        &--axes {
+
+            position: relative;
+     
+            transform-style: preserve-3d;
+            transition: all 1s ease-in-out;
+   
+            &--prism {
+                width: var(--block-width);
+                height: 100%;
+            }
+            &--cube {
+                width:  var(--size);
+                height: var(--size);
+            }
+
+            span { 
+                width: 100%;
+                
+                position: absolute;
+
+                transform-style: preserve-3d;
+                
+                &.prism {
+                    height: calc(var(--block-width) /0.208333333);
+                    &.h {
+                        transform: rotateY(calc(var(--j) * 90deg)) translateZ(calc(var(--block-width)/2)); 
+                    }
+        
+                    &.v {
+                        transform: rotateX(calc(var(--i) * 90deg)) translateZ(calc(var(--block-width)/0.208333333));
+                    }
+                }
+
+                &.cube {
+                    height: var(--size);
+                    width:  var(--size);
+                    &.h {
+                        transform: rotateY(calc(var(--j) * 90deg)) translateZ(calc(var(--size)/2)); 
+                    }
+        
+                    &.v {
+                        transform: rotateX(calc(var(--i) * 90deg))  translateZ(calc(var(--size)/2));
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+@each  $i in  $side-numbers {
+
+    .box__image--axes span label.box__side-#{$i} { 
+        background-image: url(../img/box-image-#{$i}.jpg);
+    }
+
+    .box__image--axes span.cube label.box__side-#{$i} { 
+        background-image: url(../img/box2-image-#{$i}.jpg);
+    }
+
+
+    .box__input,
+    .cube__input   {
+        &--#{$i}:checked ~ .box__image {
+
+            & .box__image--axes {
+
+                @if($i == 5){
+                    transform: rotateX(-270deg); 
+                } @else {
+                    @if($i == 6){
+                        transform: rotateX(-90deg); 
+                    } @else {
+
+                        transform: rotateY(-1 * $i * 90deg); 
+                    }
+                }
+            }
+        } 
+    }
+    
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotateY(-1 * 1 * 90deg); 
+     }
+    25% {
+        transform: rotateY(-1 * 2 * 90deg); 
+    }    
+    50% {
+        transform: rotateY(-1 * 3 * 90deg); 
+    }  
+    75% {
+        transform: rotateY(-1 * 4 * 90deg); 
+    }  
+}
+
+
+
