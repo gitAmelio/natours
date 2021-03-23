@@ -65,13 +65,16 @@
 
     // FRONT SIDE STYLING
     &__picture {
+        
+        box-shadow: inset -5px 0px 5px 1px rgba(#fff, 0.20), 
+                    inset 5px 5px 5px 1px rgba(#000, 0.59);
+
         background-size: cover;
         height: 23rem;
         background-blend-mode: hue;
         border-top-left-radius: 45px;
         border-top-right-radius: 45px;
-        box-shadow: inset -5px 0px 5px 1px rgba(#fff, 0.20), 
-                    inset 5px 5px 5px 1px rgba(#000, 0.59);
+        
 
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), 
