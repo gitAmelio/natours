@@ -1204,7 +1204,7 @@ main {
     border-right: none;
     box-shadow: 0px 0px 0px rgba(255, 188, 66, 0), inset 10px 15px 15px #754c00, 0px 0px 0px rgba(255, 188, 66, 0), inset -8px -10px 15px #a86c00; }
   .section-features::before {
-    background-image: linear-gradient(to right bottom, rgba(255, 188, 66, 0.9), rgba(255, 188, 66, 0.9)), url(/img/box-image-5.jpg);
+    background-image: linear-gradient(to right bottom, rgba(255, 188, 66, 0.9), rgba(255, 188, 66, 0.9)), url(../../img/box-image-5.jpg);
     background-size: cover; }
   .section-features__row {
     padding: 8rem;
@@ -1330,11 +1330,11 @@ main {
     border-top-right-radius: 45px;
     box-shadow: inset -5px 0px 5px 1px rgba(255, 255, 255, 0.2), inset 5px 5px 5px 1px rgba(0, 0, 0, 0.59); }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url("/img/box-image-6.jpg"); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../../img/box-image-6.jpg); }
     .card__picture--2 {
-      background-image: linear-gradient(to right bottom, #dddddd, #0F1110), url("/img/box-image-4.jpg"); }
+      background-image: linear-gradient(to right bottom, #dddddd, #0F1110), url(../../img/box-image-4.jpg); }
     .card__picture--3 {
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url("/img/box-image-5.jpg"); }
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../../img/box-image-5.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -1675,9 +1675,9 @@ main {
         height: 100%;
         width: 50%; } }
     .popup__img--1 {
-      background-image: url(/img/popup-image-1.jpg); }
+      background-image: url(../../img/popup-image-1.jpg); }
     .popup__img--2 {
-      background-image: url(/img/popup-image-2.jpg); }
+      background-image: url(../../img/popup-image-2.jpg); }
   .popup__text {
     font-size: 1.6rem;
     line-height: 1.7; }
@@ -2001,14 +2001,14 @@ main {
   position: relative;
   width: 80vw;
   color: #0F1110;
-  background-image: linear-gradient(90deg, rgba(117, 109, 84, 0.9) 0%, rgba(117, 109, 84, 0.9) 70%, transparent 70%), url(/img/image-10.jpg);
+  background-image: linear-gradient(90deg, rgba(117, 109, 84, 0.9) 0%, rgba(117, 109, 84, 0.9) 70%, transparent 70%), url(../../img/image-10.jpg);
   background-size: cover;
   border-radius: 45px;
   margin: 8rem;
   box-shadow: -5px -5px 10px 1px rgba(255, 255, 255, 0.63), inset -5px -5px 5px 1px rgba(255, 255, 255, 0.2), 5px 5px 10px 5px rgba(0, 0, 0, 0.4), inset 5px 5px 5px 1px rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 56.25em) {
     .book {
-      background-image: linear-gradient(90deg, rgba(117, 109, 84, 0.9) 0%, rgba(117, 109, 84, 0.9) 100%, transparent 100%), url(/img/image-10.jpg);
+      background-image: linear-gradient(90deg, rgba(117, 109, 84, 0.9) 0%, rgba(117, 109, 84, 0.9) 100%, transparent 100%), url(../../img/image-10.jpg);
       background-size: cover; } }
   .book__form {
     width: 50%;
