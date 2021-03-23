@@ -45,6 +45,7 @@
     }
 
     &__background {
+
         overflow: hidden;
         height: 6rem;
         width: 6rem;
@@ -52,9 +53,9 @@
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        background-color: transparent;
+
         z-index: 1000;
-        transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+        transition: all 0.5s;
         background-color: rgba($color-black,  .9);
                 
         @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
@@ -152,22 +153,31 @@
 
     // FUNCTIONALITY
     &__checkbox:checked ~ &__background {
-        animation: expand  .4s linear forwards;
+        // animation: expand  .4s linear forwards;
         border-radius: 0;
         position: fixed;
         top: 0;
         right: 0;
+
+        opacity: 1;
+        width: 150%;
+        height: 100vh;
+        border-radius: 0;
     }
 
     &__checkbox:not(checked) ~ &__background {
-        animation: shrink .8s linear forwards;
-        width: 0;
-        transition: all 1s;
+        // animation: shrink .8s linear forwards;
 
         border-radius: 0;
-        position: fixed;
+        // position: fixed;
         top: 0;
         right: 0;
+
+        background-image: linear-gradient(to right, rgba($color-black,  .0), rgba($color-black,  .0));
+        width: 0;
+        height: 0;
+        border-radius: 300px;
+        border-top-right-radius: 0;
     }
 
     &__checkbox:checked ~ &__nav &__list &__item {
