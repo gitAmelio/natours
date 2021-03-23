@@ -275,7 +275,7 @@
         rgba($palette1-color-1, .9) 70%,
         transparent 70%
     )
-    , url(../../img/image-10.jpg);
+    , url("../img/image-10.jpg");
     background-size: cover;
     border-radius: 45px;
     margin: 8rem;
@@ -292,7 +292,7 @@
             rgba($palette1-color-1, .9) 100%,
             transparent 100%
         )
-        , url(../../img/image-10.jpg);
+        , url("../img/image-10.jpg");
         background-size: cover;
     }
 
