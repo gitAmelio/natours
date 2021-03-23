@@ -75,15 +75,15 @@
 
         &--1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), 
-                              url(../../img/box-image-6.jpg);
+                              url(/img/box-image-6.jpg);
         }
         &--2 {
             background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), 
-                              url(../../img/box-image-4.jpg);
+                              url(/img/box-image-4.jpg);
         }
         &--3 {
             background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
-                              url(../../img/box-image-5.jpg);
+                              url(/img/box-image-5.jpg);
         }
     }
 
