@@ -1675,9 +1675,9 @@ main {
         height: 100%;
         width: 50%; } }
     .popup__img--1 {
-      background-image: url(../../img/popup-image-1.jpg); }
+      background-image: url("../img/popup-image-1.jpg"); }
     .popup__img--2 {
-      background-image: url(../../img/popup-image-2.jpg); }
+      background-image: url("../img/popup-image-2.jpg"); }
   .popup__text {
     font-size: 1.6rem;
     line-height: 1.7; }
