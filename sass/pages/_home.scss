@@ -33,6 +33,11 @@
             padding: 0 5rem;
             grid-column-gap: 5rem;
         }
+        @include respond(phone) { 
+            width: 90vw;
+            padding: 0;
+            grid-column-gap: 5rem;
+        }
         width: 100vw;
 
         &--text {

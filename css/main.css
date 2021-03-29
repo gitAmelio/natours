@@ -1842,6 +1842,11 @@ main {
       .section-about__detail {
         padding: 0 5rem;
         grid-column-gap: 5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .section-about__detail {
+        width: 90vw;
+        padding: 0;
+        grid-column-gap: 5rem; } }
     .section-about__detail--text {
       grid-column: 1 / span 1; }
       .section-about__detail--text p:not(:last-child) {
