@@ -912,7 +912,6 @@ main {
   position: relative;
   z-index: 10;
   padding: 4.5rem;
-  margin-bottom: 5rem;
   background-color: transparent;
   font-size: 4rem;
   text-transform: uppercase;
@@ -1257,12 +1256,11 @@ main {
     .section-features__row .feature {
       justify-self: center;
       align-self: stretch;
+      margin: 0;
       position: relative;
       z-index: 10;
       padding: 4.5rem;
-      margin-bottom: 5rem;
       background-color: transparent;
-      margin: 0;
       background-color: rgba(234, 242, 215, 0.9);
       box-shadow: -5px -5px 10px 1px rgba(255, 255, 255, 0.3), inset -5px -5px 5px 1px rgba(255, 255, 255, 0.1), 5px 5px 10px 5px rgba(0, 0, 0, 0.4), inset 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
       border-radius: 20px;

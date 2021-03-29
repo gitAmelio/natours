@@ -45,8 +45,8 @@
         .feature {
             justify-self: center;
             align-self: stretch;
-            @include old-sheet;
             margin: 0;
+            @include old-sheet;
             background-color: rgba($palette1-color-2, 0.9);
             &::before {
                 top:0;
