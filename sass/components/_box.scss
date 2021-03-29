@@ -6,7 +6,15 @@
 
     @include respond(tab-port) { 
         --block-width: 9rem;
-        margin-top: 12rem;
+          margin-top: 12rem;
+    }
+    @include respond(phone) { 
+        --block-width: 7rem;
+        margin-top: 17rem;
+    }
+    @include respond(phone-sm) { 
+        --block-width: 5rem;
+        margin-top: 22rem;
     }
 
     -webkit-box-reflect: below 15px linear-gradient(transparent, transparent, $color-black_0_2);

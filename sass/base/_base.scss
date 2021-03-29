@@ -26,6 +26,8 @@ html {
     @include respond(tab-between) { // width < 1100
         font-size: 43.75%;  //1 rem = 7px; 7px/16 = 
     }
+
+    overflow-x: hidden;
 }
 
 body {
