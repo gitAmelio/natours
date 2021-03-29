@@ -1863,7 +1863,8 @@ main {
         .section-about__detail--composition {
           grid-column: 1/-1;
           grid-row: 1;
-          margin-bottom: 8rem; } }
+          margin: 0 0 8rem 0;
+          justify-self: center; } }
       .section-about__detail--composition .composition {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -1894,7 +1895,13 @@ main {
               --size: 60rem !important; } }
         @media only screen and (max-width: 37.5em) {
           .section-about__detail--composition .composition .box--1 {
-            --size: 35rem !important; } }
+            --size: 50rem !important; } }
+        @media only screen and (max-width: 34.4em) {
+          .section-about__detail--composition .composition .box--1 {
+            --size: 40rem !important; } }
+        @media only screen and (max-width: 26.8em) {
+          .section-about__detail--composition .composition .box--1 {
+            --size: 30rem !important; } }
 
 .section-tours {
   display: grid;
