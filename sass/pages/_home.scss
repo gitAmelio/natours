@@ -146,8 +146,8 @@
         grid-template-columns: repeat(3, 1fr);
 
         @include respond(tab-port){
-           display: flex;
-           flex-direction: column;
+        //    display: flex;
+        //    flex-direction: column;
            justify-content: space-around;
            align-items: center;
         }

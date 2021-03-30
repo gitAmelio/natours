@@ -37,8 +37,8 @@
             flex-wrap: wrap;
         }
         @include respond(phone) {
-            display: flex;
-            flex-direction: column;
+            // display: flex;
+            // flex-direction: column;
             justify-content: space-around;
             align-items: center;
         }

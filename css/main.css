@@ -1255,8 +1255,6 @@ main {
         flex-wrap: wrap; } }
     @media only screen and (max-width: 37.5em) {
       .section-features__row {
-        display: flex;
-        flex-direction: column;
         justify-content: space-around;
         align-items: center; } }
     .section-features__row .feature {
@@ -1931,8 +1929,6 @@ main {
     padding: 0 8rem; }
     @media only screen and (max-width: 56.25em) {
       .section-tours__cards {
-        display: flex;
-        flex-direction: column;
         justify-content: space-around;
         align-items: center; } }
   .section-tours__cta {
