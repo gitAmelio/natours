@@ -1233,6 +1233,7 @@ main {
     background-size: cover; }
   .section-features__row {
     padding: 8rem;
+    justify-content: space-around;
     grid-gap: 4rem;
     display: flex;
     position: relative;
@@ -1924,6 +1925,7 @@ main {
     grid-column: 1 /-1;
     grid-row: 2;
     display: grid;
+    justify-content: space-around;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 8rem;
     padding: 0 8rem; }

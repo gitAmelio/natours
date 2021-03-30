@@ -142,6 +142,7 @@
         grid-column: 1 /-1;
         grid-row: 2;
         display: grid;
+        justify-content: space-around;
         grid-template-columns: repeat(3, 1fr);
 
         @include respond(tab-port){
@@ -203,21 +204,6 @@
         padding: 10rem;
 
         @include respond(phone) {
-            // -ms-box-orient: horizontal;
-            // display: -webkit-box;
-            // display: -moz-box;
-            // display: -ms-flexbox;
-            // display: -moz-flex;
-            // display: -webkit-flex;
-
-            // display: flex;
-           
-            // -webkit-justify-content: space-between; 
-            // justify-content: space-between; 
-
-            // flex-direction: column;
-            // justify-content: center;
-            // align-items: center;
             margin-bottom: 2rem;
             padding: 5rem;
         }

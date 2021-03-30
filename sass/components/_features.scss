@@ -18,7 +18,9 @@
     }
     &__row {
         padding: 8rem;
+        justify-content: space-around;
         grid-gap: 4rem;
+
         display: flex;
         
         @include respond(tab-between) { 
