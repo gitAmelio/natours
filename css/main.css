@@ -1254,6 +1254,8 @@ main {
         flex-wrap: wrap; } }
     @media only screen and (max-width: 37.5em) {
       .section-features__row {
+        display: flex;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center; } }
     .section-features__row .feature {
