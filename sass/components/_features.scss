@@ -19,7 +19,6 @@
     &__row {
         padding: 8rem;
         grid-gap: 4rem;
-        
         display: flex;
         
         @include respond(tab-between) { 

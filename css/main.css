@@ -1924,12 +1924,13 @@ main {
     grid-column: 1 /-1;
     grid-row: 2;
     display: grid;
-    justify-content: space-around;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 8rem;
     padding: 0 8rem; }
     @media only screen and (max-width: 56.25em) {
       .section-tours__cards {
+        display: flex;
+        flex-direction: column;
         justify-content: space-around;
         align-items: center; } }
   .section-tours__cta {
