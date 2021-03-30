@@ -20,6 +20,8 @@
         padding: 8rem;
         grid-gap: 4rem;
         display: flex;
+        justify-content: space-around;
+        align-items: center;
         
         @include respond(tab-between) { 
             padding: 10rem 7rem;
