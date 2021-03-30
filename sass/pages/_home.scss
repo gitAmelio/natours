@@ -202,9 +202,20 @@
         padding: 10rem;
 
         @include respond(phone) {
+            -ms-box-orient: horizontal;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -moz-flex;
+            display: -webkit-flex;
+
             display: flex;
+           
+            -webkit-justify-content: space-between; 
+            justify-content: space-between; 
+
             flex-direction: column;
-            justify-content: center;
+            // justify-content: center;
             align-items: center;
             padding: 5rem;
         }
