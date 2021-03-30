@@ -1233,7 +1233,6 @@ main {
     background-size: cover; }
   .section-features__row {
     padding: 8rem;
-    justify-content: space-around;
     grid-gap: 4rem;
     display: flex;
     position: relative;
