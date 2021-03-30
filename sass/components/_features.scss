@@ -33,6 +33,8 @@
             padding: 6rem 25rem;
         }
         @include respond(tab-less) { 
+            display: grid;
+            justify-content: space-around;
             padding: 10rem 20rem;
             flex-wrap: wrap;
         }
