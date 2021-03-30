@@ -1473,6 +1473,7 @@ main {
       width: 100%; } }
   @media only screen and (max-width: 37.5em) {
     .story {
+      width: 90vw;
       transform: skewX(0); } }
   .story__shape {
     width: 15rem;
@@ -1980,6 +1981,7 @@ main {
     grid-row: 1;
     width: 100vw;
     display: grid;
+    justify-content: space-around;
     grid-gap: 8rem;
     padding: 10rem; }
     @media only screen and (max-width: 37.5em) {

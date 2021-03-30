@@ -19,7 +19,7 @@
     }
 
     @include respond(phone){
-
+        width: 90vw;
         transform: skewX(0);
     }
 
