@@ -1257,7 +1257,7 @@ main {
         display: grid;
         justify-content: space-around;
         align-items: center;
-        margin-bottom: 2rem; } }
+        margin: 2rem; } }
     .section-features__row .feature {
       justify-self: center;
       align-self: stretch;
