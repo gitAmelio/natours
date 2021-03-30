@@ -12,12 +12,15 @@
     transform: skewX(-12deg);
 
     @include respond(tab-port) {
+        // display: flex;
+        // flex-direction: column;
         padding: 4rem;
         padding-left: 7rem;
         width: 100%
     }
 
     @include respond(phone){
+
         transform: skewX(0);
     }
 

@@ -7,7 +7,7 @@
     color: rgba($palette1-color-5, 1); 
 
     &:before {
-        content: '';
+        // content: '';
         @include box-cutout--fine;
 
         background-color: darken($palette1-color-3, 5%);

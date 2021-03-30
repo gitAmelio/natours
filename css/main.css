@@ -84,7 +84,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     height: 97%;
     width: 100%;
@@ -105,7 +105,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     height: 97%;
     width: 100%;
@@ -126,7 +126,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     height: 97%;
     width: 100%;
@@ -155,7 +155,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     height: 97%;
     width: 100%;
@@ -177,7 +177,7 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     height: 97%;
     width: 100%;
@@ -1018,10 +1018,9 @@ main {
   color: #37241c; }
   .detail:before {
     content: '';
-    content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     height: 97%;
     width: 100%;
@@ -1210,7 +1209,7 @@ main {
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     height: 97%;
     width: 100%;
@@ -1253,6 +1252,12 @@ main {
       .section-features__row {
         padding: 10rem 20rem;
         flex-wrap: wrap; } }
+    @media only screen and (max-width: 37.5em) {
+      .section-features__row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; } }
     .section-features__row .feature {
       justify-self: center;
       align-self: stretch;
@@ -1923,7 +1928,9 @@ main {
     @media only screen and (max-width: 56.25em) {
       .section-tours__cards {
         display: flex;
-        flex-direction: column; } }
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; } }
   .section-tours__cta {
     grid-column: 1 /-1;
     grid-row: 3;
@@ -1939,7 +1946,7 @@ main {
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%, -50%);
     height: 97%;
     width: 100%;
@@ -1976,6 +1983,8 @@ main {
     padding: 10rem; }
     @media only screen and (max-width: 37.5em) {
       .section-stories__content {
+        display: flex;
+        flex-direction: column;
         padding: 5rem; } }
   .section-stories__heading {
     grid-column: 1 /-1;

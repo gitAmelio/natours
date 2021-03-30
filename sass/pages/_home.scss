@@ -147,6 +147,8 @@
         @include respond(tab-port){
            display: flex;
            flex-direction: column;
+           justify-content: space-around;
+           align-items: center;
         }
   
         grid-gap: 8rem;
@@ -159,6 +161,7 @@
         display: flex;
         justify-content: center;
     }
+
 }
 
 .section-stories {
@@ -199,6 +202,8 @@
         padding: 10rem;
 
         @include respond(phone) {
+            display: flex;
+            flex-direction: column;
             padding: 5rem;
         }
         
