@@ -39,8 +39,6 @@
             flex-wrap: wrap;
         }
         @include respond(phone) {
-            // display: flex;
-            // flex-direction: column;
             display: grid; 
             flex-direction: column;
             justify-content: space-around;

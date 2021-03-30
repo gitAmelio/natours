@@ -1937,6 +1937,7 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        align-content: space-around;
         align-items: center; } }
   .section-tours__cta {
     grid-column: 1 /-1;
