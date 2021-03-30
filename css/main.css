@@ -1256,7 +1256,8 @@ main {
       .section-features__row {
         display: grid;
         justify-content: space-around;
-        align-items: center; } }
+        align-items: center;
+        margin-bottom: 2rem; } }
     .section-features__row .feature {
       justify-self: center;
       align-self: stretch;
