@@ -237,4 +237,7 @@
             font-size:  4rem;
         }
     }
+    @include respond(phone){
+        margin: 3rem;
+    }
 }

@@ -1460,6 +1460,9 @@ main {
         margin-bottom: 1rem; }
       .card__price-value {
         font-size: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .card {
+      margin: 3rem; } }
 
 .story {
   box-shadow: -5px -5px 10px 1px rgba(255, 255, 255, 0.3), inset -5px -5px 5px 1px rgba(255, 255, 255, 0.1), 5px 5px 10px 5px rgba(0, 0, 0, 0.4), inset 5px 5px 5px 1px rgba(0, 0, 0, 0.2);
