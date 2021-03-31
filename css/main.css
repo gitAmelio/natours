@@ -1922,6 +1922,9 @@ main {
 .section-tours {
   display: grid;
   grid-column: 1 / -1; }
+  @media only screen and (max-width: 37.5em) {
+    .section-tours {
+      height: 230rem; } }
   .section-tours__heading {
     grid-column: 1 /-1;
     grid-row: 1;
@@ -1931,6 +1934,7 @@ main {
     grid-row: 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    height: 100%;
     grid-gap: 8rem;
     padding: 0 8rem; }
     @media only screen and (max-width: 56.25em) {
@@ -1939,8 +1943,7 @@ main {
         flex-direction: column;
         justify-content: space-around;
         align-content: space-around;
-        align-items: center;
-        margin: 2rem; } }
+        align-items: center; } }
   .section-tours__cta {
     grid-column: 1 /-1;
     grid-row: 3;
