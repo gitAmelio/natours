@@ -1943,7 +1943,8 @@ main {
         flex-direction: column;
         justify-content: space-around;
         align-content: space-around;
-        align-items: center; } }
+        align-items: center;
+        padding: 0; } }
   .section-tours__cta {
     grid-column: 1 /-1;
     grid-row: 3;
