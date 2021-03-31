@@ -1322,7 +1322,8 @@ main {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem; }
+  height: 50rem;
+  margin-bottom: 2rem; }
   .card__side {
     height: 50rem;
     transition: all .8s ease;
@@ -1939,7 +1940,7 @@ main {
         justify-content: space-around;
         align-content: space-around;
         align-items: center;
-        margin: auto; } }
+        margin: 2rem; } }
   .section-tours__cta {
     grid-column: 1 /-1;
     grid-row: 3;
