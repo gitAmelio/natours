@@ -1351,7 +1351,7 @@ main {
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card__side--back-2 {
-        background-image: linear-gradient(to right bottom, #dddddd, #0F1110); }
+        background-image: linear-gradient(to right bottom, #21614a, #030e0ac7); }
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
@@ -1423,7 +1423,7 @@ main {
   @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       margin: auto;
-      width: 45rem;
+      width: 25vw;
       height: auto;
       border-radius: 45px;
       background-color: #fff;
@@ -1460,6 +1460,9 @@ main {
         margin-bottom: 1rem; }
       .card__price-value {
         font-size: 4rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .card {
+      width: 45rem; } }
   @media only screen and (max-width: 37.5em) {
     .card {
       margin: 3rem; } }
@@ -1539,23 +1542,23 @@ main {
     filter: blur(3px) brightness(80%); }
 
 .form {
-  margin-top: 10rem; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: normal; }
   .form__heading {
-    position: absolute;
-    top: 0;
-    left: 2rem;
     padding: 0;
-    margin-top: 2rem; }
+    margin-bottom: 4rem; }
   .form h2 {
     color: #756D54;
-    padding: 4rem;
+    padding: 4rem 0;
     margin-bottom: 0;
     text-transform: uppercase;
     text-shadow: 2px 2px 2px #000, -1px -1px 1px #fff; }
   .form__group:not(:last-child) {
     margin-bottom: 2rem; }
   .form__input {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     font-family: inherit;
     color: inherit;
     padding: 1.5rem 2rem;
@@ -1578,7 +1581,7 @@ main {
     font-size: 1.3rem;
     font-weight: 400;
     margin-left: 2rem;
-    margin-top: .7rem;
+    margin-top: 0.7rem;
     display: block;
     transition: all .3s; }
   .form__input:placeholder-shown + .form__label {
@@ -1638,7 +1641,9 @@ main {
   background-color: rgba(0, 0, 0, 0.9); }
   .popup:target {
     position: fixed;
-    display: flex; }
+    display: flex;
+    top: 0;
+    left: 0; }
   @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     .popup {
       backdrop-filter: blur(10px);
@@ -1683,7 +1688,6 @@ main {
     overflow: hidden; }
     .popup__right h2 {
       text-transform: uppercase;
-      color: #273e28;
       margin-bottom: 0;
       padding-left: 0; }
       .popup__right h2:hover::before {
@@ -1693,9 +1697,13 @@ main {
       @media only screen and (max-width: 56.25em) {
         .popup__right h2 {
           padding: 2rem; } }
+    .popup__right h3 {
+      padding: 0 3vw;
+      text-align: center; }
     .popup__right .btn, .popup__right .header .button, .header .popup__right .button {
       width: 40rem;
-      color: #273e28; }
+      color: #0F1110;
+      align-self: center; }
       @media only screen and (max-width: 56.25em) {
         .popup__right .btn, .popup__right .header .button, .header .popup__right .button {
           width: 30rem;
@@ -1709,8 +1717,7 @@ main {
     object-fit: cover;
     height: 50%;
     background-color: transparent;
-    background-size: cover;
-    z-index: -10; }
+    background-size: cover; }
     @media only screen and (max-width: 56.25em) {
       .popup__img {
         height: 100%;
@@ -1721,7 +1728,8 @@ main {
       background-image: url("../img/popup-image-2.jpg"); }
   .popup__text {
     font-size: 1.6rem;
-    line-height: 1.7; }
+    line-height: 1.7;
+    padding: 0 5vw; }
   .popup__close {
     font-size: 6rem;
     text-decoration: none;
@@ -1729,9 +1737,9 @@ main {
     top: 1rem;
     right: 3rem;
     z-index: 100;
-    color: #273e28; }
+    color: #0F1110; }
     .popup__close:hover {
-      color: #000; }
+      color: #756D54; }
     @media only screen and (max-width: 56.25em) {
       .popup__close {
         color: #fff; } }
@@ -1925,9 +1933,6 @@ main {
 .section-tours {
   display: grid;
   grid-column: 1 / -1; }
-  @media only screen and (max-width: 37.5em) {
-    .section-tours {
-      height: 230rem; } }
   .section-tours__heading {
     grid-column: 1 /-1;
     grid-row: 1;
@@ -2072,12 +2077,16 @@ main {
   @media only screen and (max-width: 56.25em) {
     .book {
       background-image: linear-gradient(90deg, rgba(117, 109, 84, 0.9) 0%, rgba(117, 109, 84, 0.9) 100%, transparent 100%), url("../img/image-10.jpg");
-      background-size: cover; } }
+      background-size: cover;
+      display: flex;
+      justify-content: center; } }
   .book__form {
-    width: 50%;
-    padding: 6rem; }
+    width: 70%;
+    padding: 0 7rem; }
     .book__form .btn, .book__form .header .button, .header .book__form .button {
-      color: #0F1110; }
+      color: #0F1110;
+      width: 100%;
+      margin: 6rem 0; }
     @media only screen and (max-width: 56.25em) {
       .book__form {
         width: 60%;
@@ -2085,4 +2094,4 @@ main {
     @media only screen and (max-width: 37.5em) {
       .book__form {
         width: 75%;
-        padding: 4rem; } }
+        padding: 4rem 0; } }

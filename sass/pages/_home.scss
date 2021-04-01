@@ -131,10 +131,6 @@
     display: grid;
     grid-column: 1 / -1;
     
-    @include respond(phone){
-        height: 230rem;
-    }
-
     &__heading {
         grid-column: 1 /-1;
         grid-row: 1;
@@ -321,14 +317,18 @@
         )
         , url("../img/image-10.jpg");
         background-size: cover;
+        display: flex;
+        justify-content: center;
     }
 
     &__form {
-        width: 50%;
-        padding: 6rem;
+        width: 70%;
+        padding: 0 7rem;
 
         & .btn {
             color: $palette1-color-4;
+            width: 100%;
+            margin: 6rem 0;
         }
 
         @include respond(tab-port){
@@ -337,7 +337,7 @@
         }
         @include respond(phone){
             width: 75%;
-            padding: 4rem;
+            padding: 4rem 0;
         }
 
     }

@@ -12,6 +12,8 @@
     &:target {
         position: fixed;
         display: flex;
+        top: 0;
+        left: 0;
     }
 
     background-color: rgba($color-black,  .9);
@@ -82,7 +84,6 @@
 
         & h2 {
             text-transform: uppercase;
-            color: #273e28;;
             margin-bottom: 0;
             padding-left: 0;
 
@@ -93,9 +94,15 @@
             }
         }
 
+        & h3 {
+            padding: 0 3vw;
+            text-align: center;
+        }
+
         & .btn {
             width: 40rem;
-            color: #273e28;
+            color: $palette1-color-4;
+            align-self: center;
             @include respond(tab-port) {
                 width: 30rem;
                 margin-top: 2rem;
@@ -112,7 +119,7 @@
         height: 50%;
         background-color: transparent;
         background-size: cover;
-        z-index: -10;
+        // z-index: -10;
 
         @include respond(tab-port){
             height: 100%;
@@ -130,6 +137,7 @@
     &__text {
         font-size: 1.6rem;
         line-height: 1.7;
+        padding: 0 5vw;
     }
     &__close {
         font-size: 6rem;
@@ -138,10 +146,10 @@
         top:  1rem;
         right: 3rem;
         z-index: 100;
-        color: #273e28;
+        color: $palette1-color-4;
         
         &:hover {
-            color: $color-black;
+            color: $palette1-color-1;
         }
         @include respond(tab-port) {
             color: $color-white;

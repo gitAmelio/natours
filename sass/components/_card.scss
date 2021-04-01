@@ -47,7 +47,8 @@
             }
 
             &-2 {
-                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+                // background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+                background-image: linear-gradient(to right bottom, #21614a,#030e0ac7);
             }
 
             &-3 {
@@ -179,7 +180,7 @@
             only screen and (hover: none) {    
 
         margin: auto;        
-        width: 45rem;
+        width: 25vw;
         height: auto;
         border-radius: 45px;
         background-color: $color-white;
@@ -236,6 +237,9 @@
         &__price-value {
             font-size:  4rem;
         }
+    }
+    @include respond(tab-port){
+        width: 45rem;
     }
     @include respond(phone){
         margin: 3rem;
